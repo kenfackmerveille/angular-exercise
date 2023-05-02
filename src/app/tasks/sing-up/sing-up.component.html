@@ -1,0 +1,9 @@
+<div class="login">
+    <form action="" method="post">
+        <input name="Username" class="input Username" type="text" id="user" placeholder="enter your Username"  [(ngModel)] = 'users.username'><br>
+        <input name="email" class="Email" type="email" placeholder="enter your email"  [(ngModel)] = "users.email"><br>
+        <input name="password" class="input Password" type="password" id="pass"
+        placeholder="enter your password" [(ngModel)] = 'users.password'><br>
+        <button class="register" (click)="register()">Register</button>
+    </form>
+</div>
