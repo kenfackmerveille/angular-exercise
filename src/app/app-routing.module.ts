@@ -10,7 +10,7 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
-    path:'home-page',
+    path:'',
     component: HomePageComponent,
     children:[
       {
