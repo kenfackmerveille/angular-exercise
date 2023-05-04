@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IData } from 'src/app/interface/register.interface';
 import { UsersService } from 'src/app/services/user/users.service';
 
@@ -9,14 +10,15 @@ import { UsersService } from 'src/app/services/user/users.service';
 })
 export class LogInComponent {
 
-  constructor(private kenfi: UsersService){}
+  constructor(private kenfi: UsersService, private route:Router){}
 
   users: IData={
-    username: "",
+    email: "",
     password:""
   }
 
   submit(){
-    this.kenfi.signIn(this.users)
+    this.kenfi.signIn(this.users);
+    this.route.navigate(["/send/main"]);
   }
 }

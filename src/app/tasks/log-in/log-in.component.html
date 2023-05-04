@@ -1,6 +1,6 @@
 <div class="login">
 <form action="" method="post">
-    <input name="username" class="input Username" type="text" placeholder="enter your Username" ><br>
+    <input name="email" class="input Username" type="email" placeholder="enter your User email"  [(ngModel)] = "users.email"><br>
     <input name="password" class="input Password" type="password" placeholder="enter your password" [(ngModel)] = "users.password"><br>
     <button (click)="submit()" class="submit">Send</button>
 </form>

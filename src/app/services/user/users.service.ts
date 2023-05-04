@@ -21,13 +21,16 @@ export class UsersService {
   }
 
   signIn(users:IData){
-    const register = this.kenfack.get("ange")
+    const register = this.kenfack.get("ange");
     let logIn;
     for(const usersObject of register.data){
-      if (users["username"] == usersObject["username"] && users["email"] == usersObject["email"] && users["password"] == usersObject["password"]){
+      if (users["email"] == usersObject["email"] && users["password"] == usersObject["password"]){
         alert ('logIn succefully!!')
+        return;
+      }else{
+
+        alert('sorry the information is not correct')
       }
-      alert('sorry the information is not correct')
     }
   }
 

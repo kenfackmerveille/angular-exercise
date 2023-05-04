@@ -1,5 +1,5 @@
 export interface IData{
-  username: string,
-  email?: string,
+  username?: string,
+  email: string,
   password:string
 }
