@@ -1,4 +1,4 @@
-<div class="login">
+<!-- <div class="login">
     <form action="" method="post">
         <input name="Username" class="input Username" type="text" id="user" placeholder="enter your Username"  [(ngModel)] = 'users.username'><br>
         <input name="email" class="Email" type="email" placeholder="enter your email"  [(ngModel)] = "users.email"><br>
@@ -6,4 +6,17 @@
         placeholder="enter your password" [(ngModel)] = 'users.password'><br>
         <button class="register" (click)="register()">Register</button>
     </form>
-</div>
+</div> -->
+<form #registerForm="ngForm" (ngSubmit)="signup(registerForm.value)" action="" method="post">
+    <div class="control">
+      <label for="">Email:</label><br>
+      <input type="email" ngModel name="email" placeholder="Enter Email">
+    </div>
+    <div class="control">
+      <label for="">password:</label><br>
+      <input type="password" ngModel name="password" placeholder="Enter Password">
+    </div>
+    <div class="btn">
+      <button class="Signup">Register</button>
+    </div>
+</form>      

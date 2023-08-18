@@ -1,32 +1,49 @@
-.login{
-    width: 40%;
-    height: 400px;
-    background: rgb(0, 81, 128);
+form{
+    width: 500px;
+    height: 350px;
+    background: rgb(0, 124, 128);
     box-shadow: 1px 2px 3px 2px rgb(230, 230, 230);
     text-align: center;
-    margin: 40px auto;
+    margin: 90px auto;
     padding: auto;
     border-radius: 8px;
-}
-input{
-    font-size: 18px;
-    padding-left: 10px;
-    margin-top: 50px;
-    width: 18rem;
-    height: 30px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid gray;
-}
-button{
-    font-size: 18px;
-    padding: 6px;
-    width: 90px;
-    background-image: linear-gradient(to bottom right, rgb(132, 24, 255), rgb(255, 23, 135));
-    color: white;
-    margin-top: 50px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+
+    .control{
+        margin-top: 30px;
+        label{
+           font-size: 18px;
+            padding-left: 10px;
+            width: 200px;
+            height: 40px;  
+        }
+
+        input{
+            font-size: 18px;
+            padding-left: 10px;
+            margin-top: 20px;
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid gray;
+        }
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        margin-left: 190px;
+        button{
+            font-size: 18px;
+            padding: 6px;
+            width: 90px;
+            background-image: linear-gradient(to bottom right, rgb(132, 24, 255), rgb(255, 23, 135));
+            color: white;
+            margin-top: 50px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
 }

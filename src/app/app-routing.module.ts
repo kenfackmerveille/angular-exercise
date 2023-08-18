@@ -7,6 +7,7 @@ import { LogInComponent } from './tasks/log-in/log-in.component';
 import { LogOutComponent } from './tasks/log-out/log-out.component';
 import { SendComponent } from './tasks/send/send.component';
 import { MainComponent } from './main/main.component';
+import { AddTaskComponent } from './tasks/add-task/add-task.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
         component: HeaderComponent
       }
     ]
+  },
+  {
+    path: 'home-page',
+    component: HomePageComponent
   },
   {
     path:'sing-up',
@@ -40,6 +45,10 @@ const routes: Routes = [
         component: MainComponent
       }
     ]
+  },
+  {
+    path: 'add-task',
+    component: AddTaskComponent
   }
 ];
 

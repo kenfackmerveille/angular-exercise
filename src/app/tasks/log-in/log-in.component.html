@@ -1,8 +1,17 @@
-<div class="login">
-<form action="" method="post">
-    <input name="email" class="input Username" type="email" placeholder="enter your User email"  [(ngModel)] = "users.email"><br>
-    <input name="password" class="input Password" type="password" placeholder="enter your password" [(ngModel)] = "users.password"><br>
-    <button (click)="submit()" class="submit">Send</button>
-</form>
-</div>
+<form #registerForm="ngForm" (ngSubmit)="signin(registerForm.value)" action="" method="post">
+    <div class="control">
+      <label for="">Email:</label><br>
+      <input type="email" ngModel name="email" placeholder="Enter your Email">
+    </div>
+    <div class="control">
+      <label for="">password:</label><br>
+      <input type="password" ngModel name="password" placeholder="Enter your Password">
+    </div>
+    <div class="btn">
+        <button (click)="submit()">SignIn</button>
+      <a routerLink="/" class="Signup">
+        SignUp
+      </a>
+    </div>  
+</form>      
 <router-outlet></router-outlet>

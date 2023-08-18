@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IData } from 'src/app/interface/register.interface';
-import { UsersService } from 'src/app/services/user/users.service';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { addDoc, Firestore, collection, getDocs, doc, updateDoc } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-log-in',
@@ -10,15 +12,21 @@ import { UsersService } from 'src/app/services/user/users.service';
 })
 export class LogInComponent {
 
-  constructor(private kenfi: UsersService, private route:Router){}
+  constructor(public auth: Auth, public firestore: Firestore, private store: AngularFireModule, private route:Router) {
+  }
 
-  users: IData={
-    email: "",
-    password:""
+  signin(value: any) {
+    signInWithEmailAndPassword(this.auth, value.email, value.password)
+      .then((respond: any) => {
+        console.log(respond.user);
+        alert('welcome' + respond.user)
+      })
+      .catch((err) => {
+        alert(err.message)
+      })
   }
 
   submit(){
-    this.kenfi.signIn(this.users);
-    this.route.navigate(["/send/main"]);
+    this.route.navigate(["send/main"]);
   }
 }
